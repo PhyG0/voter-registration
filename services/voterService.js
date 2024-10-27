@@ -5,12 +5,12 @@ const { Web3 } = require('web3')
 const fs = require('fs')
 const path = require('path')
 const voters = require('../models/voterKeyPair')
+require('dotenv').config()
+
 // Connect to Ganache
-const provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545')
+const provider = new Web3.providers.HttpProvider(process.env.BUILDBEAR)
 const web3 = new Web3(provider)
 const importAccount = require('../utils/importAccount')
-
-require('dotenv').config()
 
 const encryption = new Encryption(process.env.ENCRYPTION_KEY)
 
@@ -23,12 +23,11 @@ const contractJson = JSON.parse(
 )
 
 const contractABI = contractJson.abi
-
 // Get the contract address for the network ID 5777 (Ganache's default network)
-const contractAddress = contractJson.networks['5777'].address
+const contractAddress = contractJson.networks['21293'].address
 console.log(contractAddress)
 if (!contractAddress) {
-  console.log('Contract not deployed on network 5777')
+  console.log('Contract not deployed on network 21293')
   process.exit(1)
 }
 
