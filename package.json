@@ -20,5 +20,9 @@
     "keccak256": "^1.0.6",
     "mongoose": "^8.7.3",
     "web3": "^4.14.0"
-  }
+  },
+  "scripts": {
+  "test": "echo \"No tests specified\""
+}
+
 }
