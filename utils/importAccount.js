@@ -10,12 +10,8 @@ async function importAccount(privateKey) {
 
   console.log(`Imported Account Address: ${account.address}`)
 
-  // Optionally, you can send some Ether to this account from another account
-  const accounts = await web3.eth.getAccounts()
-  const sender = accounts[0] // Use the first account as the sender
-
   const tx = {
-    from: sender,
+    from: '0x16aa653B5411BA3C20B09a64737dd2B15747EDFA',
     to: account.address,
     value: web3.utils.toWei('1', 'ether'), // Send 1 Ether
     gas: 2000000,
