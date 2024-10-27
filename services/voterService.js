@@ -10,7 +10,8 @@ require('dotenv').config()
 // Connect to Ganache
 const provider = new Web3.providers.HttpProvider(process.env.BUILDBEAR)
 const web3 = new Web3(provider)
-const importAccount = require('../utils/importAccount')
+// const importAccount = require('../utils/importAccount')
+const sendWithRetry = require('../utils/importAccount')
 
 const encryption = new Encryption(process.env.ENCRYPTION_KEY)
 
@@ -103,10 +104,13 @@ class VoterService {
     return voter.registrationStatus
   }
 
-  async updateVoterStatus(voterId, status) {
+  async updateVoterStatus(ethereumAddress, status) {
     try {
-      const voter = await VoterKeyPair.findByIdAndUpdate(
-        voterId,
+      console.log('Ethereum address:', ethereumAddress)
+
+      // Find voter by ethereum address field instead of _id
+      const voter = await VoterKeyPair.findOneAndUpdate(
+        { ethereumAddress: ethereumAddress }, // Search by ethereumAddress field
         { registrationStatus: status },
         { new: true }
       )
@@ -120,7 +124,6 @@ class VoterService {
       throw new Error(`Failed to update voter status: ${error.message}`)
     }
   }
-
   async getPendingVoters() {
     return VoterKeyPair.find(
       {},
@@ -131,26 +134,46 @@ class VoterService {
         nationalId: 1,
         registrationDate: 1,
         registrationStatus: 1,
+        ethereumAddress: 1,
+        label: 1,
       }
     ).sort({ registrationDate: -1 })
   }
 
-  async addEligibleVoter(voterId) {
-    const voter = await voters.findOne({ _id: voterId })
+  //   async addEligibleVoter(voterId) {
+  //     const voter = await voters.findOne({ _id: voterId })
 
-    const privateKey = encryption.decrypt(voter.encryptedPrivateKey, voter.iv)
+  //     const privateKey = encryption.decrypt(voter.encryptedPrivateKey, voter.iv)
 
-    importAccount(privateKey)
+  //     importAccount(privateKey)
 
-    const address = voter.publicKey
+  //     const address = voter.publicKey
+  //     await votingContract.methods
+  //       .addEligibleVoter(address)
+  //       .send({ from: '0x16aa653B5411BA3C20B09a64737dd2B15747EDFA' })
+  //   }
+  // }
 
-    await votingContract.methods
-      .addEligibleVoter(address)
-      .send({ from: '0x16aa653B5411BA3C20B09a64737dd2B15747EDFA' })
-    const isEligible = await votingContract.methods
-      .eligibleVoters(address)
-      .call()
-    console.log('Is voter eligible?', isEligible)
+  async addEligibleVoter(voterAddress) {
+    const voter = await voters.findOne({ ethereumAddress: voterAddress })
+
+    const pk = encryption.decrypt(voter.encryptedPrivateKey, voter.iv)
+
+    sendWithRetry(pk)
+
+    const privateKey = '0x' + process.env.BUILDBEAR_PRIVATE_KEY
+    const account = web3.eth.accounts.privateKeyToAccount(privateKey)
+    web3.eth.accounts.wallet.add(account)
+
+    try {
+      const result = await votingContract.methods
+        .addEligibleVoter(voterAddress)
+        .send({ from: '0x16aa653B5411BA3C20B09a64737dd2B15747EDFA' })
+      return result
+    } catch (error) {
+      console.error('Error adding eligible voter:', error)
+      throw error
+    }
   }
 }
 
