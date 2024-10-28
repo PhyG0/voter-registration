@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
-    origins: ['http://localhost:5173', 'http://127.0.0.1:5174'],
+    origins: ['http://localhost:5173', 'http://127.0.0.1:5174', 'https://phyg0.github.io', 'https://pollen-spangle-turnover.glitch.me' ],
   })
 )
 
