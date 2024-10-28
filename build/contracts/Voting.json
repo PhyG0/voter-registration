@@ -17810,7 +17810,9 @@
   "ast": {
     "absolutePath": "project:/contracts/voting.sol",
     "exportedSymbols": {
-      "Voting": [331]
+      "Voting": [
+        331
+      ]
     },
     "id": 332,
     "license": "MIT",
@@ -17818,7 +17820,11 @@
     "nodes": [
       {
         "id": 1,
-        "literals": ["solidity", "0.8", ".19"],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ],
         "nodeType": "PragmaDirective",
         "src": "33:23:0"
       },
@@ -17830,7 +17836,9 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 331,
-        "linearizedBaseContracts": [331],
+        "linearizedBaseContracts": [
+          331
+        ],
         "name": "Voting",
         "nameLocation": "69:6:0",
         "nodeType": "ContractDefinition",
@@ -18133,7 +18141,9 @@
                 "pathNode": {
                   "id": 23,
                   "name": "Candidate",
-                  "nameLocations": ["458:9:0"],
+                  "nameLocations": [
+                    "458:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 8,
                   "src": "458:9:0"
@@ -18412,7 +18422,11 @@
                                 "844:9:0",
                                 "875:8:0"
                               ],
-                              "names": ["name", "voteCount", "isActive"],
+                              "names": [
+                                "name",
+                                "voteCount",
+                                "isActive"
+                              ],
                               "nodeType": "FunctionCall",
                               "src": "773:132:0",
                               "tryCall": false,
@@ -18536,7 +18550,9 @@
                   },
                   "id": 67,
                   "initializationExpression": {
-                    "assignments": [44],
+                    "assignments": [
+                      44
+                    ],
                     "declarations": [
                       {
                         "constant": false,
@@ -18782,7 +18798,10 @@
                       "id": 71,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1023:7:0",
                       "typeDescriptions": {
@@ -18898,7 +18917,10 @@
                       "id": 83,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1215:7:0",
                       "typeDescriptions": {
@@ -19035,8 +19057,16 @@
                         "isPure": false,
                         "kind": "structConstructorCall",
                         "lValueRequested": false,
-                        "nameLocations": ["1478:4:0", "1512:9:0", "1539:8:0"],
-                        "names": ["name", "voteCount", "isActive"],
+                        "nameLocations": [
+                          "1478:4:0",
+                          "1512:9:0",
+                          "1539:8:0"
+                        ],
+                        "names": [
+                          "name",
+                          "voteCount",
+                          "isActive"
+                        ],
                         "nodeType": "FunctionCall",
                         "src": "1453:112:0",
                         "tryCall": false,
@@ -19112,7 +19142,9 @@
                 "modifierName": {
                   "id": 95,
                   "name": "onlyOwner",
-                  "nameLocations": ["1416:9:0"],
+                  "nameLocations": [
+                    "1416:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "1416:9:0"
@@ -19267,7 +19299,10 @@
                       "id": 116,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1728:7:0",
                       "typeDescriptions": {
@@ -19382,7 +19417,10 @@
                       "id": 124,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1810:7:0",
                       "typeDescriptions": {
@@ -19511,7 +19549,9 @@
                 "modifierName": {
                   "id": 113,
                   "name": "onlyOwner",
-                  "nameLocations": ["1707:9:0"],
+                  "nameLocations": [
+                    "1707:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "1707:9:0"
@@ -19666,7 +19706,10 @@
                       "id": 147,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "2035:7:0",
                       "typeDescriptions": {
@@ -19796,7 +19839,10 @@
                       "id": 155,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "2117:7:0",
                       "typeDescriptions": {
@@ -19925,7 +19971,9 @@
                 "modifierName": {
                   "id": 144,
                   "name": "onlyOwner",
-                  "nameLocations": ["2014:9:0"],
+                  "nameLocations": [
+                    "2014:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "2014:9:0"
@@ -20074,7 +20122,9 @@
                 "modifierName": {
                   "id": 176,
                   "name": "onlyOwner",
-                  "nameLocations": ["2378:9:0"],
+                  "nameLocations": [
+                    "2378:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "2378:9:0"
@@ -20224,7 +20274,9 @@
                 "modifierName": {
                   "id": 190,
                   "name": "onlyOwner",
-                  "nameLocations": ["2567:9:0"],
+                  "nameLocations": [
+                    "2567:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "2567:9:0"
@@ -20349,7 +20401,9 @@
                 "modifierName": {
                   "id": 202,
                   "name": "onlyOwner",
-                  "nameLocations": ["2725:9:0"],
+                  "nameLocations": [
+                    "2725:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "2725:9:0"
@@ -20445,7 +20499,9 @@
                 "modifierName": {
                   "id": 212,
                   "name": "onlyOwner",
-                  "nameLocations": ["2880:9:0"],
+                  "nameLocations": [
+                    "2880:9:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 81,
                   "src": "2880:9:0"
@@ -20582,7 +20638,10 @@
                       "id": 227,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "3060:7:0",
                       "typeDescriptions": {
@@ -20696,7 +20755,10 @@
                       "id": 236,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "3128:7:0",
                       "typeDescriptions": {
@@ -20815,7 +20877,10 @@
                       "id": 244,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "3207:7:0",
                       "typeDescriptions": {
@@ -20930,7 +20995,10 @@
                       "id": 252,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "3289:7:0",
                       "typeDescriptions": {
@@ -21229,7 +21297,9 @@
                 "modifierName": {
                   "id": 224,
                   "name": "electionActive",
-                  "nameLocations": ["3034:14:0"],
+                  "nameLocations": [
+                    "3034:14:0"
+                  ],
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 91,
                   "src": "3034:14:0"
@@ -21353,7 +21423,9 @@
                       "pathNode": {
                         "id": 284,
                         "name": "Candidate",
-                        "nameLocations": ["3625:9:0"],
+                        "nameLocations": [
+                          "3625:9:0"
+                        ],
                         "nodeType": "IdentifierPath",
                         "referencedDeclaration": 8,
                         "src": "3625:9:0"
@@ -21595,7 +21667,10 @@
                       "id": 311,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "4007:7:0",
                       "typeDescriptions": {
@@ -21694,7 +21769,10 @@
                       "id": 318,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "4081:7:0",
                       "typeDescriptions": {
@@ -21872,8 +21950,8 @@
     "21293": {
       "events": {},
       "links": {},
-      "address": "0xcCA0851edE0A03c9C144d07059F2365DB7215A50",
-      "transactionHash": "0xd5e050a467326ebc9852a02ae1a4a0090fdf7cca5fccaf7c39f6de554c57d599"
+      "address": "0x44404081eB03037d72352a2697fa9345b47B524B",
+      "transactionHash": "0x4935dd0428d81f9ac1fb23160e05da9e4eb47937b68926278f265a69b49abaae"
     },
     "11155111": {
       "events": {},
@@ -21883,7 +21961,7 @@
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-10-27T13:27:41.447Z",
+  "updatedAt": "2024-10-28T01:07:05.858Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
